@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Status | Modern Auth</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,26 +16,6 @@
         </div>
     </div>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-        const msg = urlParams.get('msg');
-        const msgText = document.getElementById('msg-text');
-        const statusIcon = document.getElementById('status-icon');
-
-        if (msg) {
-            msgText.innerText = msg;
-        }
-
-        if (status === 'success') {
-            msgText.classList.add('success');
-            statusIcon.innerHTML = '<i class="fas fa-check-circle" style="color: #23d5ab;"></i>';
-        } else if (status === 'error') {
-            msgText.classList.add('error');
-            statusIcon.innerHTML = '<i class="fas fa-exclamation-circle" style="color: #ff4d4d;"></i>';
-        } else {
-            statusIcon.innerHTML = '<i class="fas fa-info-circle" style="color: #23a6d5;"></i>';
-        }
-    </script>
+    <script src="js/message.js"></script>
 </body>
 </html>

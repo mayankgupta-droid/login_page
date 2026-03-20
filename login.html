@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Modern Auth</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group password-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye toggle-password" onclick="togglePass('password', this)"></i>
+            </div>
+            <button type="submit">LOGIN</button>
+            <div class="links">
+                <a href="signup.html">Create Account</a>
+                <a href="#" id="forgotBtn">Forgot Password?</a>
+            </div>
+            <div class="social-login">
+                <a href="#" onclick="socialAlert('Google')"><i class="fab fa-google"></i></a>
+                <a href="#" onclick="socialAlert('Facebook')"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" onclick="socialAlert('GitHub')"><i class="fab fa-github"></i></a>
+            </div>
+        </form>
+
+        <div id="forgot-form" style="display: none; margin-top: 20px;">
+            <hr style="border: 0.5px solid rgba(255,255,255,0.2); margin: 20px 0;">
+            <form id="forgotForm">
+                <h3>Reset Password</h3>
+                <div class="form-group">
+                    <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Verify Email</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

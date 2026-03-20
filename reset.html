@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password | Modern Auth</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="resetForm">
+            <h2>New Password</h2>
+            <input type="hidden" id="email-field">
+            <div class="form-group password-container">
+                <input type="password" id="new_password" placeholder="Enter New Password" required>
+                <i class="fas fa-eye toggle-password" onclick="togglePass('new_password', this)"></i>
+            </div>
+            <button type="submit">UPDATE PASSWORD</button>
+        </form>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/reset.js"></script>
+</body>
+</html>
